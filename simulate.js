@@ -128,4 +128,11 @@ function simulateSeason() {
     console.log("The probability of Arsenal winning the league is " + probArsenalWinLeague)
 }
 
-simulateSeason();
+// simulateSeason();
+
+let btn = document.getElementById("btn")
+    
+// Apply the addEventListener method
+btn.addEventListener("click", simulateSeason)
+
+document.getElementById("result").innerHTML = 5 + 5;
