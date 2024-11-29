@@ -1,3 +1,24 @@
-let myVariable = 10;
+// let myVariable = 10;
 
-document.getElementById("result").innerHTML = 5 + 5;
+let myAnswer;
+
+console.log(myAnswer);
+
+function myFunction() {
+    myAnswer = 10;
+    console.log("myFunc was run");
+}
+
+function showAnswer() {
+    document.getElementById("result").innerHTML = myAnswer;
+}
+// myFunc();
+
+btn.addEventListener("click", myFunction)
+
+btn1.addEventListener("click", showAnswer)
+
+
+
+
+console.log(myAnswer)

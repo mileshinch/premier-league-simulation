@@ -8,7 +8,7 @@ const liverpoolDrawProb = 0.2;
 let arsenalLeagueWinners = 0;
 let liverpoolLeagueWinners = 0;
 
-let probArsenalWinLeague = 0.5;
+let probArsenalWinLeague;
 
 // Declare variables for points tallies
 let arsenalPoints = 22;
@@ -133,16 +133,21 @@ function simulateSeason() {
 
 // simulateSeason();
 
-let btn = document.getElementById("btn")
-    
-document.getElementById("result").innerHTML = probArsenalWinLeague;
-
-document.getElementById("results-div").style.display ="none";
+// let btn = document.getElementById("btn")
 
 function displayResults() {
     document.getElementById("results-div").style.display = "block";
+    document.getElementById("result").innerHTML = probArsenalWinLeague;
 }
 
 // Apply the addEventListener method
 btn.addEventListener("click", simulateSeason)
-btn.addEventListener("click", displayResults)
+btn1.addEventListener("click", displayResults)
+// btn.addEventListener("click", displayResults)
+    
+// document.getElementById("result").innerHTML = probArsenalWinLeague;
+
+document.getElementById("results-div").style.display ="none";
+
+
+
