@@ -8,6 +8,8 @@ const liverpoolDrawProb = 0.2;
 let arsenalLeagueWinners = 0;
 let liverpoolLeagueWinners = 0;
 
+let probArsenalWinLeague = 0.5;
+
 // Declare variables for points tallies
 let arsenalPoints = 22;
 let liverpoolPoints = 31;
@@ -122,17 +124,25 @@ function simulateSeason() {
 
     console.log("Arsenal won the league " + arsenalLeagueWinners + " times");
     console.log("Liverpool won the league " + liverpoolLeagueWinners + " times");
-
+    
     probArsenalWinLeague = arsenalLeagueWinners / simulations;
 
     console.log("The probability of Arsenal winning the league is " + probArsenalWinLeague)
+
 }
 
 // simulateSeason();
 
 let btn = document.getElementById("btn")
     
+document.getElementById("result").innerHTML = probArsenalWinLeague;
+
+document.getElementById("results-div").style.display ="none";
+
+function displayResults() {
+    document.getElementById("results-div").style.display = "block";
+}
+
 // Apply the addEventListener method
 btn.addEventListener("click", simulateSeason)
-
-document.getElementById("result").innerHTML = 5 + 5;
+btn.addEventListener("click", displayResults)
